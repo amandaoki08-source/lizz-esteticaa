@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lizz Estética & Massoterapia · Agendamento</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Alex+Brush&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <span class="script">Lizz</span>
+    <span class="sub">Estética e Massoterapia</span>
+  </div>
+  <nav>
+    <a href="#massagens">Massagens</a>
+    <a href="#estetica">Estética</a>
+    <a class="cta" href="#agendar">📅 Agendar horário</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <span class="eyebrow">Bem-vinda</span>
+  <h1>Mais que uma massagem, um momento de conexão com o que há de mais<span class="script">importante: você</span></h1>
+  <div class="divider"></div>
+  <p>Técnicas exclusivas que promovem equilíbrio, aliviam tensões e realçam sua melhor versão. Antes de tudo cuide de você — o seu futuro agradece.</p>
+  <div class="actions">
+    <button class="btn btn-primary" onclick="document.getElementById('agendar').scrollIntoView()">Agendar horário</button>
+    <a class="btn btn-ghost" href="#massagens" style="display:inline-flex;align-items:center;">Ver tratamentos</a>
+  </div>
+</section>
+
+<section id="massagens">
+  <div class="section-head">
+    <span class="eyebrow">Assinatura Lizz</span>
+    <h2>Massagens & combos</h2>
+  </div>
+  <div class="massage-list" id="massageList"></div>
+</section>
+
+<section id="estetica">
+  <div class="section-head">
+    <span class="eyebrow">Catálogo completo</span>
+    <h2>Estética facial & corporal</h2>
+    <p>Clique em qualquer categoria para ver os valores.</p>
+  </div>
+  <div class="cat-tabs" id="catTabs"></div>
+  <div id="catPanels"></div>
+</section>
+
+<section id="agendar">
+  <div class="section-head">
+    <span class="eyebrow">Agendamento</span>
+    <h2>Marque seu horário</h2>
+  </div>
+
+  <div class="booking-shell">
+    <div class="booking-left">
+      <div class="field">
+        <label for="servicoSelect">Serviço</label>
+        <select id="servicoSelect"></select>
+      </div>
+      <div class="field">
+        <label for="nome">Seu nome</label>
+        <input type="text" id="nome" placeholder="Como podemos te chamar?">
+      </div>
+      <div class="field">
+        <label for="telefone">Seu telefone</label>
+        <input type="tel" id="telefone" placeholder="(11) 90000-0000">
+      </div>
+      <div class="field">
+        <label for="data">Data</label>
+        <input type="date" id="data">
+      </div>
+      <div class="field" style="margin-bottom:0;">
+        <label>Horário</label>
+        <div class="slots" id="slotsGrid"></div>
+      </div>
+    </div>
+
+    <div class="booking-right">
+      <div class="field" style="margin-bottom:0;">
+        <label>Resumo do agendamento</label>
+        <div class="summary" id="summary"><span class="empty">Escolha um serviço e preencha os dados ao lado.</span></div>
+      </div>
+      <button class="btn btn-primary" id="confirmBtn" disabled onclick="confirmarWhatsApp()">Confirmar no WhatsApp</button>
+      <p class="note">Ao confirmar, abrimos o WhatsApp com sua solicitação pronta para enviar. A confirmação final é feita pela equipe Lizz.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-main">
+    <div>
+      <span class="script">Lizz</span>
+      <div class="info" style="margin-top:8px;">Estética e Massoterapia<br>Antes de tudo cuide de você, o seu futuro agradece.</div>
+    </div>
+    <div class="info">
+      📍 Avenida Santa Isabel, 128 – Vila Aparecida<br>(andar de cima do Pet Shop Alvorada)<br><br>
+      💬 (11) 97441-1070
+    </div>
+  </div>
+  <div class="badges">
+    <span>🛡️ Profissionais qualificadas</span>
+    <span>🏅 Produtos de alta qualidade</span>
+    <span>♡ Atendimento humanizado</span>
+  </div>
+</footer>
+
+<script src="js/script.js" defer></script>
+
+</body>
+</html>
